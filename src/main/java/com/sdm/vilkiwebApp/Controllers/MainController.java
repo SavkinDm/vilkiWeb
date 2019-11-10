@@ -2,7 +2,6 @@ package com.sdm.vilkiwebApp.Controllers;
 
 
 import com.sdm.vilkiwebApp.Domain.Vilka;
-import com.sdm.vilkiwebApp.Repos.VilkaRepo;
 import com.sdm.vilkiwebApp.Service.VilkaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,14 +17,13 @@ public class MainController {
 
     List<Vilka> vilkaList;
 
-    @Autowired
-    VilkaRepo vilkaRepo;
 
     @Autowired
     VilkaService vilkaService;
 
     @GetMapping("/")
     public String main(Map<String, Object> model) {
+
 
         vilkaList = vilkaService.getAllvilkas();
 

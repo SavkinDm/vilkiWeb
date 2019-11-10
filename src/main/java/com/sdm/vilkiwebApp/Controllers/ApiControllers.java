@@ -33,14 +33,9 @@ public class ApiControllers {
     @GetMapping("/getVilkas")
     public List<Vilka> getVilkas(@RequestHeader(name = "login") String login, @RequestHeader(name = "apiKey") String apikey) {
 
-        if (userService.auth(login, apikey)) {
-            return vilkaService.getAllvilkas();
-        } else {
-            return null;
-        }
 
+        return null;
     }
-
 
 
     @Autowired

@@ -2,18 +2,16 @@ package com.sdm.vilkiwebApp.Repos;
 
 
 import com.sdm.vilkiwebApp.Domain.Vilka;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.Repository;
 
-import java.util.Collection;
 import java.util.List;
 
-@org.springframework.stereotype.Repository
-public interface VilkaRepo extends JpaRepository<Vilka, Long> {
+public interface VilkaRepo extends Repository<Vilka, Long> {
 
 
     List<Vilka> findAll();
+
     List<Vilka> findAllByIncomeGreaterThan(Double percent);
 
-    void deleteByIdIn(Collection<Long> Id);
 
 }

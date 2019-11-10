@@ -1,16 +1,19 @@
 package com.sdm.vilkiwebApp.Domain;
 
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
 @Table(name = "vilka")
 public class Vilka {
 
-    @Id
+    @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long Id;
 
 
     private String Bk1team1;
@@ -48,13 +51,12 @@ public class Vilka {
     }
 
 
-
     public long getId() {
-        return id;
+        return Id;
     }
 
     public void setId(long id) {
-        this.id = id;
+        Id = id;
     }
 
     public String getBk1team1() {
